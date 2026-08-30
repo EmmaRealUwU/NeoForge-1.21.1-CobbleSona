@@ -1,5 +1,7 @@
 package net.entropy.cobblesona;
 
+import net.entropy.cobblesona.block.ModBlocks;
+import net.entropy.cobblesona.item.ModCreativemodeTabs;
 import net.entropy.cobblesona.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
@@ -62,7 +64,10 @@ public class CobbleSona {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativemodeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -88,6 +93,16 @@ public class CobbleSona {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.METANAVIGATOR);
+            event.accept(ModItems.JOKERMASK);
+        }
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.WHITEVELVET);
+            event.accept(ModItems.COGNITIVEFABRIC);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.COGNITION_BLOCK);
+            event.accept(ModBlocks.MEMENTOS_BLOCK);
         }
 //        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
 //            event.accept(EXAMPLE_BLOCK_ITEM);

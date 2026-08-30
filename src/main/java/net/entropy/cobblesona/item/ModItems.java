@@ -9,7 +9,16 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CobbleSona.MOD_ID);
 
-    public static final DeferredItem<Item> METANAVIGATOR = ITEMS.register("metanavigator",
+    public static final DeferredItem<Item> METANAVIGATOR = ITEMS.register("meta_navigator",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> JOKERMASK = ITEMS.register("joker_mask",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> WHITEVELVET = ITEMS.register("white_velvet_fabric",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> COGNITIVEFABRIC = ITEMS.register("cognitive_fabric",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus){

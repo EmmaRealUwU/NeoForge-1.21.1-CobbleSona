@@ -1,3 +1,13 @@
 {
-  "item.entropyscobblesona.metanavigator": "Meta Navigator"
+  "item.entropyscobblesona.meta_navigator": "Meta Navigator",
+  "item.entropyscobblesona.joker_mask": "Joker Mask",
+  "item.entropyscobblesona.white_velvet_fabric": "White Velvet Fabric",
+  "item.entropyscobblesona.cognitive_fabric": "Cognitive Fabric",
+
+  "block.entropyscobblesona.mementos_block":  "Mementos Block",
+  "block.entropyscobblesona.cognition_block": "Block of Cognition",
+
+  "creativetab.entropyscobblesona.cobblesona_items": "CobbleSona Items",
+  "creativetab.entropyscobblesona.cobblesona_blocks": "CobbleSona Blocks"
+
 }
