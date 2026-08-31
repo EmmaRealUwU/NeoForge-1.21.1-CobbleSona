@@ -13,7 +13,7 @@ public class ModItems {
     public static final DeferredItem<Item> METANAVIGATOR = ITEMS.register("meta_navigator",
             () -> new MetaNavigatorItem(new Item.Properties()));
 
-    public static final DeferredItem<Item> JOKERMASK = ITEMS.register("joker_mask",
+    public static final DeferredItem<Item> MASQUERADEMASK = ITEMS.register("masquerade_mask",
             () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> WHITEVELVET = ITEMS.register("white_velvet_fabric",

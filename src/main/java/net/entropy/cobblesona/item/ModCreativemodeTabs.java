@@ -17,10 +17,10 @@ public class ModCreativemodeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CobbleSona.MOD_ID);
 
     public static final Supplier<CreativeModeTab> COBBLESONA_ITEMS_TAB = CREATIVE_MODE_TAB.register("cobblesona_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.JOKERMASK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MASQUERADEMASK.get()))
                     .title(Component.translatable("creativetab.entropyscobblesona.cobblesona_items"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.JOKERMASK);
+                        output.accept(ModItems.MASQUERADEMASK);
                         output.accept(ModItems.COGNITIVEFABRIC);
                         output.accept(ModItems.WHITEVELVET);
                         output.accept(ModItems.METANAVIGATOR);

@@ -93,7 +93,7 @@ public class CobbleSona {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.METANAVIGATOR);
-            event.accept(ModItems.JOKERMASK);
+            event.accept(ModItems.MASQUERADEMASK);
         }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.WHITEVELVET);

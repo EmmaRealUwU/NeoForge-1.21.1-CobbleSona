@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "entropyscobblesona:item/joker_mask"
+    "layer0": "entropyscobblesona:item/masquerade_mask"
   }
 }
