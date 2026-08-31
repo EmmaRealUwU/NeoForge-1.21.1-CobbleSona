@@ -21,7 +21,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> COGNITION_BLOCK = registerBlock("cognition_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_MAGENTA)
-                    .strength(2f)
+                    .strength(5f)
+                    .explosionResistance(6f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.WOOL)
             ));
@@ -29,9 +30,28 @@ public class ModBlocks {
     public static final DeferredBlock<Block> MEMENTOS_BLOCK = registerBlock("mementos_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLACK)
-                    .strength(16f)
+                    .strength(50f)
+                    .explosionResistance(1200f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.HEAVY_CORE)
+            ));
+
+    public static final DeferredBlock<Block> EMBEDDED_COGNITION = registerBlock("embedded_cognition",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_GRAY)
+                    .strength(3f)
+                    .explosionResistance(3f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.STONE)
+            ));
+
+    public static final DeferredBlock<Block> BURIED_COGNITION = registerBlock("buried_cognition",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BROWN)
+                    .strength(0.5f)
+                    .explosionResistance(0.5f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.ROOTED_DIRT)
             ));
 
 

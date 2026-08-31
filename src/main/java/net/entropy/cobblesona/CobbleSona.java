@@ -101,6 +101,8 @@ public class CobbleSona {
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.BURIED_COGNITION);
+            event.accept(ModBlocks.EMBEDDED_COGNITION);
             event.accept(ModBlocks.COGNITION_BLOCK);
             event.accept(ModBlocks.MEMENTOS_BLOCK);
         }

@@ -31,6 +31,8 @@ public class ModCreativemodeTabs {
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(CobbleSona.MOD_ID, "cobblesona_items_tab"))
                     .title(Component.translatable("creativetab.entropyscobblesona.cobblesona_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.BURIED_COGNITION);
+                        output.accept(ModBlocks.EMBEDDED_COGNITION);
                         output.accept(ModBlocks.COGNITION_BLOCK);
                         output.accept(ModBlocks.MEMENTOS_BLOCK);
                     }).build());

@@ -1,6 +1,7 @@
 package net.entropy.cobblesona.item;
 
 import net.entropy.cobblesona.CobbleSona;
+import net.entropy.cobblesona.item.custom.MetaNavigatorItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -10,7 +11,7 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CobbleSona.MOD_ID);
 
     public static final DeferredItem<Item> METANAVIGATOR = ITEMS.register("meta_navigator",
-            () -> new Item(new Item.Properties()));
+            () -> new MetaNavigatorItem(new Item.Properties()));
 
     public static final DeferredItem<Item> JOKERMASK = ITEMS.register("joker_mask",
             () -> new Item(new Item.Properties()));
