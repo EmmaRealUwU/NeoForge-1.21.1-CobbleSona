@@ -1,6 +1,7 @@
 {
   "item.entropyscobblesona.meta_navigator": "Meta Navigator",
   "item.entropyscobblesona.masquerade_mask": "Masquerade Mask",
+  "item.entropyscobblesona.knight_mask": "Knight Mask",
   "item.entropyscobblesona.white_velvet_fabric": "White Velvet Fabric",
   "item.entropyscobblesona.cognitive_fabric": "Cognitive Fabric",
 
@@ -8,6 +9,7 @@
   "block.entropyscobblesona.buried_cognition": "Buried Cognition",
   "block.entropyscobblesona.embedded_cognition": "Embedded Cognition",
   "block.entropyscobblesona.cognition_block": "Block of Cognition",
+  "block.entropyscobblesona.sos_block": "Sea of Souls",
 
   "creativetab.entropyscobblesona.cobblesona_items": "CobbleSona Items",
   "creativetab.entropyscobblesona.cobblesona_blocks": "CobbleSona Blocks"

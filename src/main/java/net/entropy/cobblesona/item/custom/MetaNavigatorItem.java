@@ -1,60 +1,57 @@
 package net.entropy.cobblesona.item.custom;
 
-import net.entropy.cobblesona.block.ModBlocks;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.network.chat.Component;
+import net.minecraft.stats.Stats;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.portal.DimensionTransition;
+import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.NotNull;
 
-import java.util.Map;
+import java.util.Objects;
 
 public class MetaNavigatorItem extends Item {
-    private static final Map<Block, Block> META_MAP =
-            Map.of(
-                    Blocks.DIRT, ModBlocks.BURIED_COGNITION.get(),
-                    Blocks.STONE, ModBlocks.EMBEDDED_COGNITION.get()
-            );
-    private static final Map<Block, Block> UNMETA_MAP =
-            Map.of(
-                    ModBlocks.BURIED_COGNITION.get(), Blocks.DIRT,
-                    ModBlocks.EMBEDDED_COGNITION.get(), Blocks.STONE
-            );
 
     public MetaNavigatorItem(Properties properties) {
         super(properties);
     }
 
     @Override
-    public InteractionResult useOn(UseOnContext context) {
-        Level level = context.getLevel();
-        Block clickedBlock = level.getBlockState(context.getClickedPos()).getBlock();
-        if(META_MAP.containsKey(clickedBlock)) {
-            if(!level.isClientSide()) {
-                level.setBlockAndUpdate(context.getClickedPos(), META_MAP.get(clickedBlock).defaultBlockState());
-
-                context.getItemInHand().hurtAndBreak(1, ((ServerLevel) level), context.getPlayer(),
-                        item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
-
-                level.playSound(null, context.getClickedPos(), SoundEvents.BEACON_ACTIVATE, SoundSource.BLOCKS);
+    public @NotNull InteractionResultHolder<ItemStack> use(Level level, Player player, @NotNull InteractionHand hand) {
+        ItemStack itemstack = player.getItemInHand(hand);
+        if(!level.isClientSide) {
+            if(level.dimension() == Level.OVERWORLD) {
+                player.changeDimension(new DimensionTransition(
+                        Objects.requireNonNull(Objects.requireNonNull(level.getServer()).getLevel(Level.NETHER)),
+                        player.getPosition(0),
+                        new Vec3(0, 0, 0),
+                        player.getYRot(),
+                        player.getXRot(),
+                        false,
+                        DimensionTransition.DO_NOTHING
+                ));
+            } else if (level.dimension() == Level.NETHER) {
+                player.changeDimension(new DimensionTransition(
+                        Objects.requireNonNull(Objects.requireNonNull(level.getServer()).getLevel(Level.OVERWORLD)),
+                        player.getPosition(0),
+                        new Vec3(0, 0, 0),
+                        player.getYRot(),
+                        player.getXRot(),
+                        false,
+                        DimensionTransition.DO_NOTHING
+                ));
+            } else {
+                player.sendSystemMessage(Component.literal(
+                        "There's a time and place for everything! But you can't use that here."
+                ));
             }
         }
-        else if(UNMETA_MAP.containsKey(clickedBlock)) {
-            if(!level.isClientSide()) {
-                level.setBlockAndUpdate(context.getClickedPos(), UNMETA_MAP.get(clickedBlock).defaultBlockState());
 
-                context.getItemInHand().hurtAndBreak(1, ((ServerLevel) level), context.getPlayer(),
-                        item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
-
-                level.playSound(null, context.getClickedPos(), SoundEvents.BEACON_DEACTIVATE, SoundSource.BLOCKS);
-            }
-        }
-
-        return super.useOn(context);
+        player.awardStat(Stats.ITEM_USED.get(this));
+        return InteractionResultHolder.success(itemstack);
     }
 }

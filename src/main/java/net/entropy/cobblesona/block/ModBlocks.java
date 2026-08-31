@@ -1,6 +1,7 @@
 package net.entropy.cobblesona.block;
 
 import net.entropy.cobblesona.CobbleSona;
+import net.entropy.cobblesona.block.custom.SeaOfSoulsBlock;
 import net.entropy.cobblesona.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -52,6 +53,15 @@ public class ModBlocks {
                     .explosionResistance(0.5f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.ROOTED_DIRT)
+            ));
+
+    public static final DeferredBlock<Block> SOS_BLOCK = registerBlock("sos_block",
+            () -> new SeaOfSoulsBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLUE)
+                    .strength(-1f)
+                    .explosionResistance(-1f)
+                    .lightLevel(state -> 7)
+                    .sound(SoundType.WET_GRASS)
             ));
 
 

@@ -21,6 +21,7 @@ public class ModCreativemodeTabs {
                     .title(Component.translatable("creativetab.entropyscobblesona.cobblesona_items"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.MASQUERADEMASK);
+                        output.accept(ModItems.KNIGHTMASK);
                         output.accept(ModItems.COGNITIVEFABRIC);
                         output.accept(ModItems.WHITEVELVET);
                         output.accept(ModItems.METANAVIGATOR);
@@ -35,6 +36,7 @@ public class ModCreativemodeTabs {
                         output.accept(ModBlocks.EMBEDDED_COGNITION);
                         output.accept(ModBlocks.COGNITION_BLOCK);
                         output.accept(ModBlocks.MEMENTOS_BLOCK);
+                        output.accept(ModBlocks.SOS_BLOCK);
                     }).build());
 
     public static void register(IEventBus eventBus) {

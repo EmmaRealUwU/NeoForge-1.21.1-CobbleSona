@@ -16,6 +16,9 @@ public class ModItems {
     public static final DeferredItem<Item> MASQUERADEMASK = ITEMS.register("masquerade_mask",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> KNIGHTMASK = ITEMS.register("knight_mask",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> WHITEVELVET = ITEMS.register("white_velvet_fabric",
             () -> new Item(new Item.Properties()));
 

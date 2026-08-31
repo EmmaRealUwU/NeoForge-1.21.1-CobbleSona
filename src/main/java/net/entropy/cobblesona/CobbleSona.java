@@ -1,5 +1,6 @@
 package net.entropy.cobblesona;
 
+import com.mojang.logging.LogUtils;
 import net.entropy.cobblesona.block.ModBlocks;
 import net.entropy.cobblesona.item.ModCreativemodeTabs;
 import net.entropy.cobblesona.item.ModItems;
@@ -13,6 +14,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(CobbleSona.MOD_ID)
@@ -20,7 +22,7 @@ public class CobbleSona {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "entropyscobblesona";
     // Directly reference a slf4j logger
-//    public static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 //    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
 //    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
 //    // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
@@ -94,6 +96,7 @@ public class CobbleSona {
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.METANAVIGATOR);
             event.accept(ModItems.MASQUERADEMASK);
+            event.accept(ModItems.KNIGHTMASK);
         }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.WHITEVELVET);
@@ -105,6 +108,7 @@ public class CobbleSona {
             event.accept(ModBlocks.EMBEDDED_COGNITION);
             event.accept(ModBlocks.COGNITION_BLOCK);
             event.accept(ModBlocks.MEMENTOS_BLOCK);
+            event.accept(ModBlocks.SOS_BLOCK);
         }
 //        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
 //            event.accept(EXAMPLE_BLOCK_ITEM);
@@ -115,6 +119,6 @@ public class CobbleSona {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
-//        LOGGER.info("HELLO from server starting");
+        LOGGER.info("I am Thou, Thou art I");
     }
 }
