@@ -16,5 +16,10 @@
   "item.entropyscobblesona.white_velvet_fabric": "White Velvet Fabric",
   "item.entropyscobblesona.cognitive_fabric": "Cognitive Crystal",
 
-  "item.entropyscobblesona.pancakes": "Delicious Pancakes"
+  "text.entropyscobblesona.meta_navigator.nav_use_error": "There's a time and place for everything! But you can't use that here.",
+  "text.entropyscobblesona.meta_navigator.hold_shift": "Hold §bShift§r for more information",
+  "text.entropyscobblesona.meta_navigator.tooltip": "Press %s while holding to enter the Metaverse.",
+
+  "item.entropyscobblesona.pancakes": "Pancakes",
+  "text.entropyscobblesona.pancakes.tooltip": "I thought I heard something about delicious pancakes..."
 }

@@ -6,5 +6,5 @@ import net.minecraft.world.food.FoodProperties;
 
 public class ModFoodProperties {
     public static final FoodProperties PANCAKES = new FoodProperties.Builder().nutrition(3).saturationModifier(1f)
-            .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 69), 0.01f).build();
+            .effect(() -> new MobEffectInstance(MobEffects.GLOWING, 5), (float) 6 / 9).build();
 }

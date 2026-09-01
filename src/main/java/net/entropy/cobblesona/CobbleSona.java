@@ -94,10 +94,13 @@ public class CobbleSona {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(ModItems.METANAVIGATOR);
             event.accept(ModItems.MASQUERADEMASK);
             event.accept(ModItems.KNIGHTMASK);
             event.accept(ModItems.TENGUMASK);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
+            event.accept(ModItems.METANAVIGATOR);
         }
 
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
@@ -106,11 +109,14 @@ public class CobbleSona {
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
-            event.accept(ModBlocks.BURIED_COGNITION);
-            event.accept(ModBlocks.EMBEDDED_COGNITION);
             event.accept(ModBlocks.COGNITION_BLOCK);
             event.accept(ModBlocks.MEMENTOS_BLOCK);
             event.accept(ModBlocks.SOS_BLOCK);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.BURIED_COGNITION);
+            event.accept(ModBlocks.EMBEDDED_COGNITION);
         }
 
         if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
