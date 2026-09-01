@@ -1,9 +1,7 @@
 {
-  "item.entropyscobblesona.meta_navigator": "Meta Navigator",
-  "item.entropyscobblesona.masquerade_mask": "Masquerade Mask",
-  "item.entropyscobblesona.knight_mask": "Knight Mask",
-  "item.entropyscobblesona.white_velvet_fabric": "White Velvet Fabric",
-  "item.entropyscobblesona.cognitive_fabric": "Cognitive Crystal",
+
+  "creativetab.entropyscobblesona.cobblesona_items": "CobbleSona Items",
+  "creativetab.entropyscobblesona.cobblesona_blocks": "CobbleSona Blocks",
 
   "block.entropyscobblesona.mementos_block":  "Mementos Block",
   "block.entropyscobblesona.buried_cognition": "Buried Cognitite",
@@ -11,7 +9,12 @@
   "block.entropyscobblesona.cognition_block": "Cognitite Block",
   "block.entropyscobblesona.sos_block": "Sea of Souls",
 
-  "creativetab.entropyscobblesona.cobblesona_items": "CobbleSona Items",
-  "creativetab.entropyscobblesona.cobblesona_blocks": "CobbleSona Blocks"
+  "item.entropyscobblesona.meta_navigator": "Meta Navigator",
+  "item.entropyscobblesona.masquerade_mask": "Masquerade Mask",
+  "item.entropyscobblesona.knight_mask": "Knight Mask",
+  "item.entropyscobblesona.tengu_mask": "Tengu Mask",
+  "item.entropyscobblesona.white_velvet_fabric": "White Velvet Fabric",
+  "item.entropyscobblesona.cognitive_fabric": "Cognitive Crystal",
 
+  "item.entropyscobblesona.pancakes": "Delicious Pancakes"
 }

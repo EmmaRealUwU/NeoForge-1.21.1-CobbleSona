@@ -19,11 +19,17 @@ public class ModItems {
     public static final DeferredItem<Item> KNIGHTMASK = ITEMS.register("knight_mask",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> TENGUMASK = ITEMS.register("tengu_mask",
+            () -> new Item(new Item.Properties()));
+
     public static final DeferredItem<Item> WHITEVELVET = ITEMS.register("white_velvet_fabric",
             () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> COGNITIVEFABRIC = ITEMS.register("cognitive_fabric",
             () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> PANCAKES = ITEMS.register("pancakes",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.PANCAKES)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

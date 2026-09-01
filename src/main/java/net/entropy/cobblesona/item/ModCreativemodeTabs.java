@@ -22,8 +22,10 @@ public class ModCreativemodeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.MASQUERADEMASK);
                         output.accept(ModItems.KNIGHTMASK);
+                        output.accept(ModItems.TENGUMASK);
                         output.accept(ModItems.COGNITIVEFABRIC);
                         output.accept(ModItems.WHITEVELVET);
+                        output.accept(ModItems.PANCAKES);
                         output.accept(ModItems.METANAVIGATOR);
                     }).build());
 

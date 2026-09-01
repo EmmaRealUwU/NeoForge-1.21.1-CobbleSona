@@ -97,7 +97,9 @@ public class CobbleSona {
             event.accept(ModItems.METANAVIGATOR);
             event.accept(ModItems.MASQUERADEMASK);
             event.accept(ModItems.KNIGHTMASK);
+            event.accept(ModItems.TENGUMASK);
         }
+
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.WHITEVELVET);
             event.accept(ModItems.COGNITIVEFABRIC);
@@ -110,9 +112,10 @@ public class CobbleSona {
             event.accept(ModBlocks.MEMENTOS_BLOCK);
             event.accept(ModBlocks.SOS_BLOCK);
         }
-//        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-//            event.accept(EXAMPLE_BLOCK_ITEM);
-//        }
+
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS){
+            event.accept(ModItems.PANCAKES);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
