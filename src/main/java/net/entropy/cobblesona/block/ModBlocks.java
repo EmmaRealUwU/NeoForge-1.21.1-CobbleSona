@@ -21,11 +21,11 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> COGNITION_BLOCK = registerBlock("cognition_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .mapColor(MapColor.COLOR_YELLOW)
                     .strength(5f)
                     .explosionResistance(6f)
                     .requiresCorrectToolForDrops()
-                    .sound(SoundType.WOOL)
+                    .sound(SoundType.AMETHYST)
             ));
 
     public static final DeferredBlock<Block> MEMENTOS_BLOCK = registerBlock("mementos_block",

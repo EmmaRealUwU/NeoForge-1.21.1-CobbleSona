@@ -3,12 +3,12 @@
   "item.entropyscobblesona.masquerade_mask": "Masquerade Mask",
   "item.entropyscobblesona.knight_mask": "Knight Mask",
   "item.entropyscobblesona.white_velvet_fabric": "White Velvet Fabric",
-  "item.entropyscobblesona.cognitive_fabric": "Cognitive Fabric",
+  "item.entropyscobblesona.cognitive_fabric": "Cognitive Crystal",
 
   "block.entropyscobblesona.mementos_block":  "Mementos Block",
-  "block.entropyscobblesona.buried_cognition": "Buried Cognition",
-  "block.entropyscobblesona.embedded_cognition": "Embedded Cognition",
-  "block.entropyscobblesona.cognition_block": "Block of Cognition",
+  "block.entropyscobblesona.buried_cognition": "Buried Cognitite",
+  "block.entropyscobblesona.embedded_cognition": "Embedded Cognitite",
+  "block.entropyscobblesona.cognition_block": "Cognitite Block",
   "block.entropyscobblesona.sos_block": "Sea of Souls",
 
   "creativetab.entropyscobblesona.cobblesona_items": "CobbleSona Items",
