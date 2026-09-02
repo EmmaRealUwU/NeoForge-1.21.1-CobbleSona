@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "entropyscobblesona:cognition_block"
+          "name": "entropyscobblesona:mementos_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "entropyscobblesona:cognition_block"
+  "random_sequence": "entropyscobblesona:blocks/mementos_block"
 }

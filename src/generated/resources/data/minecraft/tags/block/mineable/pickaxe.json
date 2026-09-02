@@ -1,8 +1,7 @@
 {
-  "replace": false,
   "values": [
-    "entropyscobblesona:embedded_cognition",
     "entropyscobblesona:cognition_block",
+    "entropyscobblesona:embedded_cognition",
     "entropyscobblesona:mementos_block"
   ]
 }

@@ -62,6 +62,7 @@ public class ModBlocks {
                     .explosionResistance(-1f)
                     .lightLevel(state -> 7)
                     .sound(SoundType.WET_GRASS)
+                    .noLootTable()
             ));
 
 

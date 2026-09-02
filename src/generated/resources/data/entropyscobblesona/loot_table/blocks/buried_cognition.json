@@ -26,11 +26,20 @@
                   }
                 }
               ],
-              "name": "entropyscobblesona:embedded_cognition"
+              "name": "entropyscobblesona:buried_cognition"
             },
             {
               "type": "minecraft:item",
               "functions": [
+                {
+                  "add": false,
+                  "count": {
+                    "type": "minecraft:uniform",
+                    "max": 1.0,
+                    "min": 0.0
+                  },
+                  "function": "minecraft:set_count"
+                },
                 {
                   "enchantment": "minecraft:fortune",
                   "formula": "minecraft:ore_drops",
@@ -48,5 +57,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "entropyscobblesona:blocks/embedded_cognition"
+  "random_sequence": "entropyscobblesona:blocks/buried_cognition"
 }

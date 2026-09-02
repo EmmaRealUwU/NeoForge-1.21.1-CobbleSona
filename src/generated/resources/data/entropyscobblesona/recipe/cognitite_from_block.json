@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "entropyscobblesona:cognition_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "entropyscobblesona:cognitive_fabric"
+  }
+}
