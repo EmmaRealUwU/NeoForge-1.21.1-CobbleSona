@@ -1,6 +1,7 @@
 package net.entropy.cobblesona.block.custom;
 
 import net.entropy.cobblesona.item.ModItems;
+import net.entropy.cobblesona.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -15,8 +16,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.Map;
 
 public class SeaOfSoulsBlock extends Block {
     public SeaOfSoulsBlock(Properties properties) {
@@ -33,7 +32,7 @@ public class SeaOfSoulsBlock extends Block {
     @Override
     public void stepOn(@NotNull Level level, @NotNull BlockPos pos, @NotNull BlockState state, @NotNull Entity entity) {
         if(entity instanceof ItemEntity itemEntity && level.dimension() == Level.NETHER) {
-            if(itemEntity.getItem().getItem() == ModItems.WHITEVELVET.get()) {
+            if(isValidItem(itemEntity.getItem())) {
                 itemEntity.setItem(new ItemStack(ModItems.MASQUERADEMASK.get(), itemEntity.getItem().getCount()));
             }
             if(itemEntity.getItem().getItem() == Items.IRON_INGOT) {
@@ -45,6 +44,10 @@ public class SeaOfSoulsBlock extends Block {
         }
 
         super.stepOn(level, pos, state, entity);
+    }
+
+    private boolean isValidItem(ItemStack item) {
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
 //    @Override

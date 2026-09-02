@@ -9,6 +9,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
@@ -36,7 +37,7 @@ public class ModItems {
     public static final DeferredItem<Item> PANCAKES = ITEMS.register("pancakes",
             () -> new Item(new Item.Properties().food(ModFoodProperties.PANCAKES)) {
                 @Override
-                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                public void appendHoverText(@NotNull ItemStack stack, @NotNull TooltipContext context, @NotNull List<Component> tooltipComponents, @NotNull TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("text.entropyscobblesona.pancakes.tooltip"));
                     super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
                 }

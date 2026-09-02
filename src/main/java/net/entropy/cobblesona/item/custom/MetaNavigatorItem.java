@@ -16,9 +16,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.portal.DimensionTransition;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
-
-import javax.swing.text.AttributeSet;
-import javax.swing.text.Style;
 import java.util.List;
 import java.util.Objects;
 
@@ -29,7 +26,7 @@ public class MetaNavigatorItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+    public void appendHoverText(@NotNull ItemStack stack, @NotNull TooltipContext context, @NotNull List<Component> tooltipComponents, @NotNull TooltipFlag tooltipFlag) {
         if(!Screen.hasShiftDown()){
             tooltipComponents.add(Component.translatable("text.entropyscobblesona.meta_navigator.hold_shift"));
             super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
