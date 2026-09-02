@@ -25,9 +25,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.EMBEDDED_COGNITION.get())
                 .add(ModBlocks.MEMENTOS_BLOCK.get());
 
-
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.BURIED_COGNITION.get());
+
+        tag(BlockTags.DOORS)
+                .add(ModBlocks.SLOTH_DOOR.get());
+
+        tag(BlockTags.REPLACEABLE)
+                .add(ModBlocks.CAUTION_TAPE.get());
+
+        tag(BlockTags.SWORD_EFFICIENT)
+                .add(ModBlocks.CAUTION_TAPE.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.BURIED_COGNITION.get())
@@ -35,6 +43,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.COGNITION_BLOCK.get());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.MEMENTOS_BLOCK.get());
+                .add(ModBlocks.MEMENTOS_BLOCK.get())
+                .add(ModBlocks.SLOTH_DOOR.get());
+
     }
 }

@@ -65,6 +65,7 @@ public class CobbleSona {
             event.accept(ModBlocks.COGNITION_BLOCK);
             event.accept(ModBlocks.MEMENTOS_BLOCK);
             event.accept(ModBlocks.SOS_BLOCK);
+            event.accept(ModBlocks.CAUTION_TAPE);
         }
 
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
@@ -85,6 +86,10 @@ public class CobbleSona {
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             event.accept(ModBlocks.BURIED_COGNITION);
             event.accept(ModBlocks.EMBEDDED_COGNITION);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS){
+            event.accept(ModBlocks.SLOTH_DOOR);
         }
 
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

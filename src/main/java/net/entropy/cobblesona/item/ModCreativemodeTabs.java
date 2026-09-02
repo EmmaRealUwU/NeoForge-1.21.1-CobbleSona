@@ -38,6 +38,8 @@ public class ModCreativemodeTabs {
                         output.accept(ModBlocks.EMBEDDED_COGNITION);
                         output.accept(ModBlocks.COGNITION_BLOCK);
                         output.accept(ModBlocks.MEMENTOS_BLOCK);
+                        output.accept(ModBlocks.SLOTH_DOOR);
+                        output.accept(ModBlocks.CAUTION_TAPE);
                         output.accept(ModBlocks.SOS_BLOCK);
                     }).build());
 

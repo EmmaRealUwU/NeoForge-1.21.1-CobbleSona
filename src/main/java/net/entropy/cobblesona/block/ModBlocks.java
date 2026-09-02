@@ -5,10 +5,11 @@ import net.entropy.cobblesona.block.custom.SeaOfSoulsBlock;
 import net.entropy.cobblesona.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -59,10 +60,30 @@ public class ModBlocks {
             () -> new SeaOfSoulsBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_BLUE)
                     .strength(-1f)
-                    .explosionResistance(-1f)
                     .lightLevel(state -> 7)
                     .sound(SoundType.WET_GRASS)
                     .noLootTable()
+            ));
+
+    public static final DeferredBlock<DoorBlock> SLOTH_DOOR = registerBlock("sloth_door",
+            () -> new DoorBlock(BlockSetType.IRON,
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.SAND)
+                            .noOcclusion()
+                            .strength(5f)
+                            .pushReaction(PushReaction.DESTROY)
+                            .sound(SoundType.METAL)
+                            .requiresCorrectToolForDrops()
+            ));
+
+    public static final DeferredBlock<VineBlock> CAUTION_TAPE = registerBlock("caution_tape",
+            () -> new VineBlock(BlockBehaviour.Properties.of()
+                    .strength(0.2f)
+                    .mapColor(MapColor.COLOR_YELLOW)
+                    .pushReaction(PushReaction.DESTROY)
+                    .sound(SoundType.STEM)
+                    .noCollission()
+                    .requiresCorrectToolForDrops()
             ));
 
 
