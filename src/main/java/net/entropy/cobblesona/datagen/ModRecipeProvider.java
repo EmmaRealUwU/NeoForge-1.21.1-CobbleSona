@@ -41,8 +41,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('I', Items.IRON_INGOT)
                 .define('R', Items.REDSTONE)
                 .define('C', ModItems.COGNITIVEFABRIC)
-                .unlockedBy("meta_unlocked", has(ModItems.COGNITIVEFABRIC)).
-                save(recipeOutput, "entropyscobblesona:rotated_meta_from_crafting");
+                .unlockedBy("meta_unlocked", has(ModItems.COGNITIVEFABRIC))
+                .save(recipeOutput, "entropyscobblesona:rotated_meta_from_crafting");
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.COGNITIVEFABRIC.get(), 9)
                 .requires(ModBlocks.COGNITION_BLOCK)
@@ -53,6 +53,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.COGNITIVEFABRIC.get(), 9)
                 .unlockedBy("has_cognition_block", has(ModBlocks.COGNITION_BLOCK.get()))
                 .save(recipeOutput, "entropyscobblesona:block_from_cognitite");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.SLOTH_DOOR.get())
+                .pattern("SS")
+                .pattern("RC")
+                .pattern("SS")
+                .define('S', Items.CUT_SANDSTONE)
+                .define('R', Items.REDSTONE)
+                .define('C', ModItems.COGNITIVEFABRIC)
+                .unlockedBy("meta_unlocked", has(ModItems.COGNITIVEFABRIC))
+                .save(recipeOutput, "entropyscobblesona:sloth_door_crafting");
 
         modOreSmelting(recipeOutput, COGNITITE_SMELTABLES, RecipeCategory.MISC, ModItems.COGNITIVEFABRIC.get(), 1f, 200, "cognitite");
         modOreBlasting(recipeOutput, COGNITITE_SMELTABLES, RecipeCategory.MISC, ModItems.COGNITIVEFABRIC.get(), 1f, 200, "cognitite");

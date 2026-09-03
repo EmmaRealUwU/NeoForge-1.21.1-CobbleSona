@@ -23,9 +23,12 @@ public class ModCreativemodeTabs {
                         output.accept(ModItems.MASQUERADEMASK);
                         output.accept(ModItems.KNIGHTMASK);
                         output.accept(ModItems.TENGUMASK);
+
                         output.accept(ModItems.COGNITIVEFABRIC);
                         output.accept(ModItems.WHITEVELVET);
+
                         output.accept(ModItems.PANCAKES);
+
                         output.accept(ModItems.METANAVIGATOR);
                     }).build());
 
@@ -36,10 +39,11 @@ public class ModCreativemodeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.BURIED_COGNITION);
                         output.accept(ModBlocks.EMBEDDED_COGNITION);
+
                         output.accept(ModBlocks.COGNITION_BLOCK);
                         output.accept(ModBlocks.MEMENTOS_BLOCK);
                         output.accept(ModBlocks.SLOTH_DOOR);
-                        output.accept(ModBlocks.CAUTION_TAPE);
+
                         output.accept(ModBlocks.SOS_BLOCK);
                     }).build());
 

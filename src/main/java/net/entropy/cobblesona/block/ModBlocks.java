@@ -76,17 +76,6 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops()
             ));
 
-    public static final DeferredBlock<VineBlock> CAUTION_TAPE = registerBlock("caution_tape",
-            () -> new VineBlock(BlockBehaviour.Properties.of()
-                    .strength(0.2f)
-                    .mapColor(MapColor.COLOR_YELLOW)
-                    .pushReaction(PushReaction.DESTROY)
-                    .sound(SoundType.STEM)
-                    .noCollission()
-                    .requiresCorrectToolForDrops()
-            ));
-
-
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

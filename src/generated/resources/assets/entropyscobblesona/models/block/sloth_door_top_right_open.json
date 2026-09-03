@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_right_open",
+  "render_type": "entropyscobblesona:item/sloth_door",
+  "textures": {
+    "bottom": "entropyscobblesona:block/sloth_door_bottom",
+    "top": "entropyscobblesona:block/sloth_door_top"
+  }
+}

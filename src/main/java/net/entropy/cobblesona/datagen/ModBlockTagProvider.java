@@ -31,11 +31,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.DOORS)
                 .add(ModBlocks.SLOTH_DOOR.get());
 
-        tag(BlockTags.REPLACEABLE)
-                .add(ModBlocks.CAUTION_TAPE.get());
+        tag(BlockTags.REPLACEABLE);
 
-        tag(BlockTags.SWORD_EFFICIENT)
-                .add(ModBlocks.CAUTION_TAPE.get());
+        tag(BlockTags.SWORD_EFFICIENT);
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.BURIED_COGNITION.get())

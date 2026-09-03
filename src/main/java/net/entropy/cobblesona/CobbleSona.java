@@ -65,7 +65,6 @@ public class CobbleSona {
             event.accept(ModBlocks.COGNITION_BLOCK);
             event.accept(ModBlocks.MEMENTOS_BLOCK);
             event.accept(ModBlocks.SOS_BLOCK);
-            event.accept(ModBlocks.CAUTION_TAPE);
         }
 
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {

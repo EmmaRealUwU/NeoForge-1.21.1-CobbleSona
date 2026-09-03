@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "entropyscobblesona:cognitive_fabric"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "RIR",
+    "ICI",
+    "RIR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "entropyscobblesona:meta_navigator"
+  }
+}

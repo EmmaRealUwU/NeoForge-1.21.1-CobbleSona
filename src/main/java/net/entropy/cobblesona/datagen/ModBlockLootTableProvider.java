@@ -33,6 +33,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.COGNITION_BLOCK.get());
         dropSelf(ModBlocks.MEMENTOS_BLOCK.get());
+        add(ModBlocks.SLOTH_DOOR.get(),
+                block -> createDoorTable(ModBlocks.SLOTH_DOOR.get()));
+
         add(ModBlocks.BURIED_COGNITION.get(),
                 block -> createMultipleOreDrops(ModBlocks.BURIED_COGNITION.get(), ModItems.COGNITIVEFABRIC.get(), 0, 1));
         add(ModBlocks.EMBEDDED_COGNITION.get(),

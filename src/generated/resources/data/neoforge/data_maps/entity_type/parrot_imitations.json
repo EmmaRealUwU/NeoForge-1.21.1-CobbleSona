@@ -1,0 +1,10 @@
+{
+  "values": {
+    "entropyscobblesona:sos_block": {
+      "replace": true,
+      "value": {
+        "sound": "minecraft:block.sculk_shrieker.shriek"
+      }
+    }
+  }
+}
