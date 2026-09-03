@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/door_top_left",
-  "render_type": "entropyscobblesona:item/sloth_door",
+  "render_type": "minecraft:cutout",
   "textures": {
     "bottom": "entropyscobblesona:block/sloth_door_bottom",
     "top": "entropyscobblesona:block/sloth_door_top"

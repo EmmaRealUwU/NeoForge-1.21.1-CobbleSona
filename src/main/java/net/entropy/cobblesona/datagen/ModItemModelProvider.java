@@ -1,6 +1,7 @@
 package net.entropy.cobblesona.datagen;
 
 import net.entropy.cobblesona.CobbleSona;
+import net.entropy.cobblesona.block.ModBlocks;
 import net.entropy.cobblesona.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
@@ -20,5 +21,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.METANAVIGATOR.get());
         basicItem(ModItems.PANCAKES.get());
         basicItem(ModItems.WHITEVELVET.get());
+        basicItem(ModBlocks.SLOTH_DOOR.asItem());
     }
 }

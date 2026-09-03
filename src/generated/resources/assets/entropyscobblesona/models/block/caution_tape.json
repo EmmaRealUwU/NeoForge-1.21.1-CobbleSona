@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/vine",
-  "textures": {
-    "all": "entropyscobblesona:block/caution_tape",
-    "vine": "entropyscobblesona:block/caution_tape"
-  }
-}

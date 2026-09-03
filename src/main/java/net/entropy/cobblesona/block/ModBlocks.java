@@ -72,7 +72,7 @@ public class ModBlocks {
                             .noOcclusion()
                             .strength(5f)
                             .pushReaction(PushReaction.DESTROY)
-                            .sound(SoundType.METAL)
+                            .sound(SoundType.STONE)
                             .requiresCorrectToolForDrops()
             ));
 
