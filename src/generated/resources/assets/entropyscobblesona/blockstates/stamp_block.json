@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "entropyscobblesona:block/stamp_block_clicked"
+    },
+    "clicked=true": {
+      "model": "entropyscobblesona:block/stamp_block_unclicked"
+    }
+  }
+}

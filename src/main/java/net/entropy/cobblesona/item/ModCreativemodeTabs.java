@@ -42,9 +42,11 @@ public class ModCreativemodeTabs {
 
                         output.accept(ModBlocks.COGNITION_BLOCK);
                         output.accept(ModBlocks.MEMENTOS_BLOCK);
+                        output.accept(ModBlocks.STAMP_BLOCK);
                         output.accept(ModBlocks.SLOTH_DOOR);
 
                         output.accept(ModBlocks.SOS_BLOCK);
+
                     }).build());
 
     public static void register(IEventBus eventBus) {

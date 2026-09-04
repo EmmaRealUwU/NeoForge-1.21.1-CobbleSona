@@ -89,6 +89,7 @@ public class CobbleSona {
 
         if(event.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS){
             event.accept(ModBlocks.SLOTH_DOOR);
+            event.accept(ModBlocks.STAMP_BLOCK);
         }
 
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

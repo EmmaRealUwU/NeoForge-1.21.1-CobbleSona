@@ -2,6 +2,7 @@ package net.entropy.cobblesona.block;
 
 import net.entropy.cobblesona.CobbleSona;
 import net.entropy.cobblesona.block.custom.SeaOfSoulsBlock;
+import net.entropy.cobblesona.block.custom.StampBlock;
 import net.entropy.cobblesona.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -75,6 +76,14 @@ public class ModBlocks {
                             .sound(SoundType.STONE)
                             .requiresCorrectToolForDrops()
             ));
+
+    public static final DeferredBlock<Block> STAMP_BLOCK = registerBlock("stamp_block",
+            () -> new StampBlock(BlockBehaviour.Properties.of()
+                    .strength(-1f)
+                    .noLootTable()
+                    .pushReaction(PushReaction.DESTROY)
+                    .mapColor(state -> state.getValue(StampBlock.CLICKABLE) ? MapColor.COLOR_YELLOW : MapColor.COLOR_GRAY)
+                    .lightLevel(state -> state.getValue(StampBlock.CLICKABLE) ? 10 : 3)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
