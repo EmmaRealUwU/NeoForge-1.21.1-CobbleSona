@@ -64,6 +64,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("meta_unlocked", has(ModItems.COGNITIVEFABRIC))
                 .save(recipeOutput, "entropyscobblesona:sloth_door_crafting");
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STAMP_CARD.get(), 1)
+                .pattern("PPP")
+                .define('P', Items.PAPER)
+                .unlockedBy("has_paper", has(Items.PAPER))
+                .save(recipeOutput, "entropyscobblesona:stamp_card_crafting");
+
         modOreSmelting(recipeOutput, COGNITITE_SMELTABLES, RecipeCategory.MISC, ModItems.COGNITIVEFABRIC.get(), 1f, 200, "cognitite");
         modOreBlasting(recipeOutput, COGNITITE_SMELTABLES, RecipeCategory.MISC, ModItems.COGNITIVEFABRIC.get(), 1f, 200, "cognitite");
     }

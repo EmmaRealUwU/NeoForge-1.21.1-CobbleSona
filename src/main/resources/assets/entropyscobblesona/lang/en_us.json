@@ -13,6 +13,7 @@
   "block.entropyscobblesona.stamp_block": "Stamp Block",
 
   "item.entropyscobblesona.meta_navigator": "Meta Navigator",
+  "item.entropyscobblesona.stamp_card": "Stamp Card",
   "item.entropyscobblesona.masquerade_mask": "Masquerade Mask",
   "item.entropyscobblesona.knight_mask": "Knight Mask",
   "item.entropyscobblesona.tengu_mask": "Tengu Mask",
@@ -22,6 +23,9 @@
   "text.entropyscobblesona.meta_navigator.nav_use_error": "There's a time and place for everything! But you can't use that here.",
   "text.entropyscobblesona.meta_navigator.hold_shift": "Hold §bShift§r for more information",
   "text.entropyscobblesona.meta_navigator.tooltip": "Press %s while holding to enter the Metaverse.",
+  "text.entropyscobblemon.no_stamp_card": "Try crafting a stamp card to collect stamps!",
+  "text.entropyscobblesona.stamp_card_full": "Your stamp card is full!",
+  "text.entropyscobblesona.stamp_not_clickable": "This stamp has been claimed already!",
 
   "item.entropyscobblesona.pancakes": "Pancakes",
   "text.entropyscobblesona.pancakes.tooltip": "I thought I heard something about delicious pancakes..."

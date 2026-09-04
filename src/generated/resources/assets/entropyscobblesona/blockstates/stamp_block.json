@@ -1,9 +1,9 @@
 {
   "variants": {
-    "clicked=false": {
+    "clickable=false": {
       "model": "entropyscobblesona:block/stamp_block_clicked"
     },
-    "clicked=true": {
+    "clickable=true": {
       "model": "entropyscobblesona:block/stamp_block_unclicked"
     }
   }

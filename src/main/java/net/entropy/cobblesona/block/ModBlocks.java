@@ -83,7 +83,8 @@ public class ModBlocks {
                     .noLootTable()
                     .pushReaction(PushReaction.DESTROY)
                     .mapColor(state -> state.getValue(StampBlock.CLICKABLE) ? MapColor.COLOR_YELLOW : MapColor.COLOR_GRAY)
-                    .lightLevel(state -> state.getValue(StampBlock.CLICKABLE) ? 10 : 3)));
+                    .lightLevel(state -> state.getValue(StampBlock.CLICKABLE) ? 10 : 3)
+            ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

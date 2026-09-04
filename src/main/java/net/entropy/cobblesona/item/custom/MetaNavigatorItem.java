@@ -42,7 +42,7 @@ public class MetaNavigatorItem extends Item {
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(Level level, Player player, @NotNull InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
-        if(!level.isClientSide) {
+        if(!level.isClientSide()) {
             if(level.dimension() == Level.OVERWORLD) {
                 player.changeDimension(new DimensionTransition(
                         Objects.requireNonNull(Objects.requireNonNull(level.getServer()).getLevel(Level.NETHER)),
